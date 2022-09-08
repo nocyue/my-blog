@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Yu Yue">
+    
+    <title>
+        
+            three.js简单分享 |
+        
+        你好，我是虞跃
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"nocyue.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp","favicon":"https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                你好，我是虞跃
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">three.js简单分享</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Yu Yue</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-04 17:32:15</span>
+        <span class="mobile">2022-09-04 17:32</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/three-js/">three.js</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="了解three-js"><a href="#了解three-js" class="headerlink" title="了解three.js"></a>了解three.js</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>three.js是使用js语言写的一个3D库。<br/>在浏览器端，有个叫做WebGL的底层标准，这个标准被定义后，浏览器就实现了这个标准，然后就能通过js在网页上来实现三维图形的渲染。<br/>threejs就是封装了底层的图形接口，让开发更易实现3D程序</p>
+<h2 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h2><p>WebGL的渲染需要HTML的Canvas，所以渲染的3D内容都是需要在canvas元素里。<br/>一个threejs程序至少包括渲染器(Renderer)、场景(Scene)、照相机(Camera)、以及在场景里创建的各种物体。</p>
+<h3 id="渲染器"><a href="#渲染器" class="headerlink" title="渲染器"></a>渲染器</h3><p>渲染器的作用是使用WebGLRender对象，调用计算机的显卡来渲染所需要的显示的东西，包括灯光，背景，几何体等等。<br/>它需要和Canvas绑定，threejs也可以生成Canvas，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//初始化渲染器</span><br><span class="line">function initRenderer() &#123;</span><br><span class="line">  let renderer;</span><br><span class="line">  renderer = new THREE.WebGLRenderer(); //实例化渲染器</span><br><span class="line">  renderer.setSize(window.innerWidth, window.innerHeight); //设置宽和高</span><br><span class="line">  document.body.appendChild(renderer.domElement); //添加到dom</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>在threejs中添加的物体都是添加到场景中的，所以说，场景就相当于一个大容器，在程序最开始的时候进行实例化场景，然后再往场景中添加物体。代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//初始化场景</span><br><span class="line">function initScene() &#123;</span><br><span class="line">  let scene;</span><br><span class="line">  scene = new THREE.Scene(); //实例化场景</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也就是说场景是光源，相机，所有物体的父容器。</p>
+<h3 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h3><p>WebGL和threejs用的坐标是右手坐标系，右手伸出，手心朝向自己，大拇指朝向是X轴，四指为Y轴，手心朝向是Z轴。<br>在threejs中一般用的比较多的是透视相机(THREE.PerspectiveCamera)，就像人的眼睛一样，看到的东西有“近大远小”的感官效果<br>THREE.PerspectiveCamera构造函数有四个参数，分别是fov, aspect, near, far<br>fov：视角大小，如果设置为0，就相当于闭上了眼睛，值越大，视角越宽。<br>aspect：为实际窗口的纵横比，即宽度除以高度。<br>near：为距离相机最近的临界点，物体和相机距离低于这个值，物体就看不到了。<br>far： 为距离相机最远的临界点，物体和相机距离大于这个值，物体也就看不到了。</p>
+<p>如下代码，视角为45°，纵横比为窗口宽度除以窗口高度，物体的可视距离为0.1~200。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//初始化相机</span><br><span class="line">function initCamera() &#123;</span><br><span class="line">  let camera;</span><br><span class="line">  camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 200); //实例化相机</span><br><span class="line">  camera.position.set(0, 0, 15);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h2><h3 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h3><p>threejs封装了一些常见的几何体，使用时只需要定义好值就行，THREE.BoxGeometry是封装好的立方体，有三个参数<br>分别是width：X方向的长度，height：Y方向长度，depth：Z方向的长度</p>
+<h3 id="材质"><a href="#材质" class="headerlink" title="材质"></a>材质</h3><p>材质是与渲染效果相关的属性，通过改变材质可以改变物体的颜色，纹理贴图，光照模式等</p>
+<h3 id="物体"><a href="#物体" class="headerlink" title="物体"></a>物体</h3><p>最常见的一种物体就是网格(Mesh)，网格是由顶点，边，面等组成的物体，其他物体包括线段，骨骼，粒子系统等<br>创建物体需要指定几何形状和材质。代码如下,创建了个长宽高为2的立方体，材质为Phong材质，考虑了镜面反射的效果，创建了一个包含如上形状和材质的物体，添加到场景中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//创建模型</span><br><span class="line">function initMesh() &#123;</span><br><span class="line">  geometry = new THREE.BoxGeometry(2, 2, 2); //创建几何体</span><br><span class="line">  material = new THREE.MeshNormalMaterial(); //创建材质</span><br><span class="line"></span><br><span class="line">  mesh = new THREE.Mesh(geometry, material); //创建网格</span><br><span class="line">  scene.add(mesh); //将网格添加到场景</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="动作渲染"><a href="#动作渲染" class="headerlink" title="动作渲染"></a>动作渲染</h2><p>一般无限循环的动作可用requestAnimationFrame循环来不停渲染<br>如下代码，使用requestAnimationFrame，收集每一帧的dom变化，然后以每秒60帧的频率重绘dom。<br>每帧网格模型沿x轴旋转0.01弧度，沿y轴旋转0.02弧度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//运行动画</span><br><span class="line">function animate() &#123;</span><br><span class="line">  requestAnimationFrame(animate); //循环调用函数</span><br><span class="line"></span><br><span class="line">  mesh.rotation.x += 0.01; //每帧网格模型的沿x轴旋转0.01弧度</span><br><span class="line">  mesh.rotation.y += 0.02; //每帧网格模型的沿y轴旋转0.02弧度</span><br><span class="line"></span><br><span class="line">  renderer.render(scene, camera); //渲染界面</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h2><p>threejs中有很多种光源，环境光、点光源、聚光灯、平行光<br>如下代码，使用点光源，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THREE.PointLight(hex, intensity, distance)</span><br></pre></td></tr></table></figure>
+<p>其中， hex 是光源十六进制的颜色值； intensity 是亮度，默认值为 1 ，表示 100%亮度； distance 是光源最远照射到的距离，默认值为 0 。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//创建光源</span><br><span class="line">function initLight() &#123;</span><br><span class="line">  light = new THREE.PointLight(0xffffff, 2, 100);   //创建点光源</span><br><span class="line">  light.position.set(10, 10, 10);</span><br><span class="line">  scene.add(light);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>结合上述知识点，简单画了个立方体，使用点光源照射，采用了Phong 材质，<br>Phong 模型考虑了镜面反射的效果，因此对于金属、镜面的表现尤为适合，沿x轴旋转0.01弧度，y轴旋转0.02弧度不停旋转。</p>
+<img src="https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/fbnn9-g2x75.3x9dxa2sqoq0.gif" />
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/three-js/">#three.js</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/09/08/%E9%87%8D%E6%9E%84%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">重构简单笔记</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/07/26/%E6%88%91%E7%9A%84%E8%80%81%E5%A9%86%E9%A1%BE%E5%AE%87%E5%A9%B7/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">我的老婆顾宇婷</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Yu Yue</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Yu Yue">
+    
+    <title>
+        
+            重构简单笔记 |
+        
+        你好，我是虞跃
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"nocyue.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp","favicon":"https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                你好，我是虞跃
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">重构简单笔记</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://cdn.staticaly.com/gh/nocyue/image-hosting@master/blog-images/icon.6s5p8kimvwc0.webp">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Yu Yue</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-08 20:32:18</span>
+        <span class="mobile">2022-09-08 20:32</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%98%85%E8%AF%BB/">阅读</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%87%8D%E6%9E%84/">重构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="重构的定义"><a href="#重构的定义" class="headerlink" title="重构的定义"></a>重构的定义</h3><p>所谓重构是这样一个过程：在不改变代码外在行为的前提下，对代码做出修改，以改进程序的内部结构。<br>重构是一种经千锤百炼形成的有条不紊的程序整理方法，可以最大限度地减小整理过程中引入错误的概率。<br>本质上说，重构就是在代码写好之后改进它的设计。</p>
+<h3 id="代码的坏味道"><a href="#代码的坏味道" class="headerlink" title="代码的坏味道"></a>代码的坏味道</h3><p>简单来说，就是碰到什么样子的代码，就需要警惕起来，需要进行重构了。<br>下面是一部分的有问题的代码举例</p>
+<ol>
+<li><p>神秘命名<br>比如一些像abc随意命名的代码或者汉语拼音，总之一切看不懂的命名</p>
+</li>
+<li><p>重复代码<br>只要是我们看到两段相似的语法都可以确定为这段代码可以提炼，通常提炼出来会更好，当然这个要看具体情况，个人感觉真的遇到那种只有两处，且代码使用地方八杆子打不着，在代码稳定期间也不用浪费这个时间。可以通过提炼函数等手法重构</p>
+</li>
+<li><p>过长的函数<br>比如一些条件分支、一个函数做了很多事情、循环内的处理等等的都是应该重构的。可以通过提炼函数等手法。</p>
+</li>
+<li><p>循环语句<br>传统的for循环。可以用管道来取代循环例如JS中的map、forEach、reduce、filter等一系列。</p>
+</li>
+<li><p>临时字段<br>那些本身就足以说明自己是谁的，不需要名字来描述的。提炼函数。</p>
+</li>
+</ol>
+<h3 id="重构的手法"><a href="#重构的手法" class="headerlink" title="重构的手法"></a>重构的手法</h3><h4 id="提炼函数"><a href="#提炼函数" class="headerlink" title="提炼函数"></a>提炼函数</h4><p>时机：<br>当我们觉得一段大函数内某一部分代码在做的事情是同一件事，并且自成体系，不与其他掺杂时<br>当代码展示的意图和真正想做的事情不是同一件时候，如作者提到的例子。想要高亮，代码意思为反色，这样就不容易让人误解。<br>做法：<br>一个以他要做什么事情来命名的函数<br>待提炼代码复制到这个函数<br>检查这个函数内的代码的作用域、变量<br>编译查看函数内有没有报错（js可以通过eslint协助）<br>替换源函数的被提炼代码替换为函数调用<br>测试<br>替换其他代码中是否有与被提炼的代码相同或相似之处</p>
+<h4 id="提炼变量"><a href="#提炼变量" class="headerlink" title="提炼变量"></a>提炼变量</h4><p>时机：<br>一段又臭又长的表达式<br>在多处地方使用这个值（可能是当前函数、当前类乃至于更大的如全局作用域）<br>做法：<br>确保要提炼的表达式，对其他地方没有影响<br>声明一个不可修改的变量，并用表达式作为该变量的值<br>用新变量取代原来的表达式<br>测试<br>交替使用3、4</p>
+<p>例子，计算一批商品的总额，销量超过500，超出部分打9.5折，每件商品的运费为售价的10%，总运费不超过100</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//重构前</span><br><span class="line"></span><br><span class="line">return order.quantity * order.itemPrice - </span><br><span class="line">    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +</span><br><span class="line">    Math.min(order.quantity * order.itemPrice * 0.1, 100);</span><br><span class="line"></span><br><span class="line">//重构后</span><br><span class="line"></span><br><span class="line">const basePrice = order.quantity * order.itemPrice;</span><br><span class="line">const  quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;</span><br><span class="line">const shipping = Math.min(order.quantity * order.itemPrice * 0.1, 100);</span><br><span class="line">return basePrice - quantityDiscount  + shipping</span><br></pre></td></tr></table></figure>
+
+<h4 id="以查询取代临时变量"><a href="#以查询取代临时变量" class="headerlink" title="以查询取代临时变量"></a>以查询取代临时变量</h4><p>时机：<br>修改对象最好是一个类<br>有很多函数都在将同一个值作为参数传递<br>分解过长的冗余函数<br>多个函数中重复编写计算逻辑，比如讲一个值进行转换（好几个函数内都需要这个转换函数）<br>如果这个值被多次修改，应该将这些计算代码一并提炼到取值函数<br>做法：<br>检查是否每次计算过程和结果都一致(不一致则放弃)<br>如果能改为只读，就改成只读<br>将变量赋值取值提炼成函数<br>测试<br>去掉临时变量</p>
+<h4 id="以函数调用替换内联代码"><a href="#以函数调用替换内联代码" class="headerlink" title="以函数调用替换内联代码"></a>以函数调用替换内联代码</h4><p>时机：<br>函数内做的某些事情与已有函数重复<br>已有函数与函数之间希望同步变更<br>做法：<br>内联代码替换为函数（可能有参数,就要对应传递）</p>
+<h4 id="以管道替代循环"><a href="#以管道替代循环" class="headerlink" title="以管道替代循环"></a>以管道替代循环</h4><p>时机：<br>一组虽然在做相同事情的循环，但是内部过多的处理逻辑，使其晦涩难懂<br>做法：<br>创建一个新变量，用来存放每次行为处理后，参与循环的剩余集合<br>选用合适的管道，将每一次循环的行为进行搬移<br>搬移完所有的循环行为，删除整个循环</p>
+<p>例子，有一个CSV文件，里面存有各个办公室（office）的一些数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">office, country, telephone </span><br><span class="line">Chicago, USA, +1 312 373 1000</span><br><span class="line">Beijing, China, +86 4008 900 505</span><br><span class="line">Bangalore, India, +91 80 4064 9570</span><br><span class="line">Porto Alegre, Brazil, +55 51 3079 3550</span><br><span class="line">Chennai, India, +91 44 660 44766</span><br></pre></td></tr></table></figure>
+<p>下面这个acquireData函数的作用是从数据中筛选出印度的所有办公室，并返回办公室所在的城市（city）信息和联系电话（telephone number）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function acquireData(input) &#123; </span><br><span class="line">　const lines = input.split(&quot;\n&quot;);</span><br><span class="line">　let firstLine = true;</span><br><span class="line">　const result = [];</span><br><span class="line">　for (const line of lines) &#123;</span><br><span class="line">　　if (firstLine) &#123;</span><br><span class="line">　　　firstLine = false; </span><br><span class="line">　　　continue;</span><br><span class="line">　　&#125;</span><br><span class="line">　　if (line.trim() === &quot;&quot;) continue; </span><br><span class="line">　　const record = line.split(&quot;,&quot;);</span><br><span class="line">　　if (record[1].trim() === &quot;India&quot;) &#123;</span><br><span class="line">　　　result.push(&#123;city: record[0].trim(), phone: record[2].trim()&#125;);</span><br><span class="line">　　&#125;</span><br><span class="line">　&#125;</span><br><span class="line">　return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个循环略显复杂，所以可以用管道来替换它</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function acquireData(input) &#123; </span><br><span class="line">　const lines = input.split(&quot;\n&quot;); </span><br><span class="line">　return lines</span><br><span class="line">　　　　.slice (1)</span><br><span class="line">　　　　.filter (line =&gt; line.trim() !== &quot;&quot;)</span><br><span class="line">　　　　.map   (line =&gt; line.split(&quot;,&quot;))</span><br><span class="line">　　　　.filter (fields =&gt; fields[1].trim() === &quot;India&quot;)</span><br><span class="line">　　　　.map   (fields =&gt; (&#123;city: fields[0].trim(), phone: fields[2].trim()&#125;))</span><br><span class="line">　　　　;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E9%98%85%E8%AF%BB/">#阅读</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E9%87%8D%E6%9E%84/">#重构</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/04/threejs%E7%AE%80%E5%8D%95%E5%88%86%E4%BA%AB/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">three.js简单分享</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Yu Yue</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>
